@@ -7,9 +7,9 @@ import base64
 import webbrowser  
 
 st.sidebar.title("Whatsapp Chat Analyzer")
-st.sidebar.markdown("By Shivam Sharma\n\n\n\n\n\n\n\n\n")
+st.sidebar.markdown("By Shivam Sharma<br><br><br><br><br><br><br><br>")
 
-st.sidebar.markdown("Don't have the file to text currently?\nWell, no worries, I got you.\nDownload this random chat file to test the project⬇️")
+st.sidebar.markdown("Don't have the file to text currently?<br>Well, no worries, I got you.<br>Download this Random Chat file to test this app⬇️")
 
 if st.sidebar.button("Random Chat"):
     text_content = "This is the content of RandomChat.txt."
@@ -138,5 +138,5 @@ if uploaded_file is not None:
             ax.pie(emoji_df[1].head(), labels=emoji_df[0].head(), autopct="%0.2f")
             st.pyplot(fig)
 
-st.sidebar.markdown("\n\n\n\n\n\nHave a look at my [Portfolio](https://shivamshi.github.io/portfolio)")
+st.sidebar.markdown("<br><br>Have a look at my [Portfolio](https://shivamshi.github.io/portfolio)")
 
