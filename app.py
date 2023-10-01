@@ -3,11 +3,11 @@ import preprocessor
 import helper
 import matplotlib.pyplot as plt
 import seaborn as sns
-import base64  # Import base64 for encoding the file
-import webbrowser  # Import webbrowser for opening the link
+import base64  
+import webbrowser  
 
 st.sidebar.title("Whatsapp Chat Analyzer")
-st.sidebar.markdown("By Shivam Sharma")
+st.sidebar.markdown("By Shivam Sharma\n\n\n\n\n\n\n\n\n")
 
 st.sidebar.markdown("Don't have the file to text currently?\nWell, no worries, I got you.\nDownload this random chat file to test the project⬇️")
 
@@ -137,3 +137,6 @@ if uploaded_file is not None:
             fig, ax = plt.subplots()
             ax.pie(emoji_df[1].head(), labels=emoji_df[0].head(), autopct="%0.2f")
             st.pyplot(fig)
+
+st.sidebar.markdown("Have a look at my [Portfolio](https://shivamshi.github.io/portfolio)")
+
