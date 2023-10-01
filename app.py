@@ -7,11 +7,16 @@ import base64
 import webbrowser  
 
 st.sidebar.title("Whatsapp Chat Analyzer")
-st.sidebar.markdown("By Shivam Sharma")
+st.sidebar.markdown("By Shivam Sharma ([Portfolio](https://shivamshi.github.io/portfolio))")
 
-st.sidebar.text("\n\n\n\n\n\n")
+# Add empty text elements to create a gap
+st.sidebar.text("")
+st.sidebar.text("")
+st.sidebar.text("")
+st.sidebar.text("")
+st.sidebar.text("")
 
-st.sidebar.markdown("Don't have the file to text currently?<br>Well, no worries, I got you.<br>Download this Random Chat file to test this app⬇️")
+st.sidebar.markdown("Don't have the file to text currently?\nWell, no worries, I got you.\nDownload this Random Chat file to test this app⬇️")
 
 if st.sidebar.button("Random Chat"):
     text_content = "This is the content of RandomChat.txt."
@@ -139,6 +144,4 @@ if uploaded_file is not None:
             fig, ax = plt.subplots()
             ax.pie(emoji_df[1].head(), labels=emoji_df[0].head(), autopct="%0.2f")
             st.pyplot(fig)
-
-st.sidebar.markdown("<br><br>Have a look at my [Portfolio](https://shivamshi.github.io/portfolio)")
 
