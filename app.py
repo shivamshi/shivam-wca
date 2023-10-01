@@ -10,12 +10,16 @@ st.sidebar.title("Whatsapp Chat Analyzer")
 st.sidebar.markdown("By Shivam Sharma ([Portfolio](https://shivamshi.github.io/portfolio))👈")
 
 # Add empty text elements to create a gap
+st.sidebar.text("")
+st.sidebar.text("")
+st.sidebar.text("")
+
 st.text("")
 st.text("")
 st.text("")
 
 st.sidebar.markdown("Don't have the file to text currently? Well, no worries, I got you.")
-st.sidebar.markdown("\nDownload this Random Chat file to test this app⬇️")
+st.sidebar.markdown("Test this app⬇️ by downloading the below file")
 
 if st.sidebar.button("Random Chat"):
     text_content = "This is the content of RandomChat.txt."
@@ -217,3 +221,10 @@ st.markdown("""
 </form>
 """, unsafe_allow_html=True)
 
+
+st.markdown("""
+<p align="center"><a href="https://www.buymeacoffee.com/cvcvcvcvcv"> 
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" 
+    height="50" width="210" alt="cvcvcvcvcv" />
+</a></p>
+""", unsafe_allow_html=True)
