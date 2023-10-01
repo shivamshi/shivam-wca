@@ -151,10 +151,11 @@ if uploaded_file is not None:
 
 
 st.sidebar.text("")
-st.sidebar.markdown("Check the code and working of this app at ([Github](https://github.com/shivamshi/shivam-wca))👈")
-st.sidebar.markdown("Check out my Linkedin profile and hire my if you are recruiter [Linkedin](https://www.linkedin.com/in/shivammmm)👈")
-st.sidebar.markdown("or mail me: shivam4skills@gmail.com")
 st.sidebar.text("")
+st.sidebar.text("")
+st.sidebar.text("")
+st.sidebar.markdown("Check the code and working of this app at ([Github](https://github.com/shivamshi/shivam-wca))👈")
+
 
 st.markdown("""
 <style>
@@ -230,3 +231,9 @@ st.markdown("""
     height="50" width="210" alt="cvcvcvcvcv" />
 </a></p>
 """, unsafe_allow_html=True)
+st.text("")
+st.text("")
+st.text("")
+st.text("")
+st.markdown("Check out my Linkedin profile and hire my if you are recruiter [Linkedin](https://www.linkedin.com/in/shivammmm)👈")
+st.markdown("or mail me: shivam4skills@gmail.com")
