@@ -8,6 +8,8 @@ import webbrowser  # Import webbrowser for opening the link
 
 st.sidebar.title("Whatsapp Chat Analyzer")
 
+st.sidebar.markdown("Don't have the file to text currently?\nWell, no worries, I got you.\nDownload this random chat file ⬇️")
+
 # Add a download button for RandomChat.txt (visible at all times)
 if st.sidebar.button("Download RandomChat.txt"):
     # Create a text content for the file
