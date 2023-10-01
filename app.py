@@ -138,5 +138,5 @@ if uploaded_file is not None:
             ax.pie(emoji_df[1].head(), labels=emoji_df[0].head(), autopct="%0.2f")
             st.pyplot(fig)
 
-st.sidebar.markdown("Have a look at my [Portfolio](https://shivamshi.github.io/portfolio)")
+st.sidebar.markdown("\n\n\n\n\n\nHave a look at my [Portfolio](https://shivamshi.github.io/portfolio)")
 
