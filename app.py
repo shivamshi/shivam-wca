@@ -6,15 +6,17 @@ import seaborn as sns
 import base64  
 import webbrowser  
 
-st.sidebar.title("Whatsapp Chat Analyzer")
-st.sidebar.markdown("By Shivam Sharma ([Portfolio](https://shivamshi.github.io/portfolio))👈")
+st.title("Whatsapp Chat Analyzer")
+st.markdown("By Shivam Sharma ([Portfolio](https://shivamshi.github.io/portfolio))👈")
 
 # Add empty text elements to create a gap
-st.sidebar.text("")
-st.sidebar.text("")
-st.sidebar.text("")
+st.text("")
+st.text("")
+st.text("")
 
-st.sidebar.markdown("Don't have the file to text currently?\nWell, no worries, I got you.\nDownload this Random Chat file to test this app⬇️")
+st.sidebar.markdown("Don't have the file to text currently?")
+st.sidebar.markdown("Well, no worries, I got you.")
+st.sidebar.markdown("\nDownload this Random Chat file to test this app⬇️")
 
 if st.sidebar.button("Random Chat"):
     text_content = "This is the content of RandomChat.txt."
@@ -147,18 +149,18 @@ if uploaded_file is not None:
 
 st.sidebar.text("")
 st.sidebar.text("")
-st.sidebar.markdown("Check the code and working of this app at ([Github](https://github.com/shivamshi))👈")
+st.sidebar.markdown("Check the code and working of this app at ([Github](https://github.com/shivamshi/shivam-wca))👈")
 st.sidebar.text("")
-st.sidebar.text("")
-st.sidebar.markdown("""<a href="https://www.buymeacoffee.com/cvcvcvcvcv"> <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="cvcvcvcvcv" /></a>""")
 
-# CSS styles for the form
 st.markdown("""
 <style>
     .contact-form {
         text-align: center;
         max-width: 400px;
         margin: 0 auto;
+        border: 2px solid #007BFF; /* Border style */
+        padding: 20px;
+        border-radius: 10px;
     }
     .input-field {
         width: 100%;
@@ -168,6 +170,18 @@ st.markdown("""
         border-radius: 5px;
     }
     .input-field:focus {
+        outline: none;
+        border-color: #007BFF;
+    }
+    .textarea-field {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #A5CCA4;
+    }
+    .textarea-field:focus {
         outline: none;
         border-color: #007BFF;
     }
@@ -187,7 +201,7 @@ st.markdown("""
 
 # HTML form with improved UI
 st.markdown("""
-<h2 style="text-align: center;">Contact me👋</h2>
+<h2>Contact Me👋</h2>
 <form class="contact-form" action="https://formspree.io/f/xwkzngor" method="POST" target="_blank">
     <label for="name">Name</label>
     <input class="input-field" type="text" id="name" name="name" required>
@@ -196,8 +210,9 @@ st.markdown("""
     <input class="input-field" type="email" id="email" name="email" required>
     <br>
     <label for="message">Message</label>
-    <textarea class="input-field" id="message" name="message" rows="4" required></textarea>
+    <textarea class="textarea-field" id="message" name="message" rows="4" required></textarea>
     <br>
     <button class="submit-btn" type="submit" value="index.html">Send</button>
 </form>
 """, unsafe_allow_html=True)
+
