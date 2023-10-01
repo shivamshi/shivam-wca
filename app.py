@@ -150,12 +150,10 @@ st.sidebar.text("")
 st.sidebar.markdown("Check the code and working of this app at ([Github](https://github.com/shivamshi))👈")
 st.sidebar.text("")
 st.sidebar.text("")
-
-
-st.title("Contact Me👋")
+st.markdown("""<a href="https://www.buymeacoffee.com/cvcvcvcvcv"> <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="cvcvcvcvcv" /></a>""")
 
 st.markdown("""
-<h2 style="text-align: center;">Get In Touch</h2>
+<h2 style="text-align: center;">Contact Me👋</h2>
 
 <form action="https://formspree.io/f/xwkzngor" method="POST" id="contact-form" target="_blank">
     <a name="contact"></a>
