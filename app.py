@@ -7,11 +7,9 @@ import base64
 import webbrowser  
 
 st.sidebar.title("Whatsapp Chat Analyzer")
-st.sidebar.markdown("By Shivam Sharma ([Portfolio](https://shivamshi.github.io/portfolio))")
+st.sidebar.markdown("By Shivam Sharma ([Portfolio](https://shivamshi.github.io/portfolio))👈")
 
 # Add empty text elements to create a gap
-st.sidebar.text("")
-st.sidebar.text("")
 st.sidebar.text("")
 st.sidebar.text("")
 st.sidebar.text("")
@@ -144,4 +142,7 @@ if uploaded_file is not None:
             fig, ax = plt.subplots()
             ax.pie(emoji_df[1].head(), labels=emoji_df[0].head(), autopct="%0.2f")
             st.pyplot(fig)
+
+
+st.sidebar.markdown("Check the code and working of this app at ([Github](https://github.com/shivamshi))👈")
 
