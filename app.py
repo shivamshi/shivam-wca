@@ -7,7 +7,9 @@ import base64
 import webbrowser  
 
 st.sidebar.title("Whatsapp Chat Analyzer")
-st.sidebar.markdown("By Shivam Sharma<br><br><br><br><br><br><br><br>")
+st.sidebar.markdown("By Shivam Sharma")
+
+st.sidebar.text("\n\n\n\n\n\n")
 
 st.sidebar.markdown("Don't have the file to text currently?<br>Well, no worries, I got you.<br>Download this Random Chat file to test this app⬇️")
 
