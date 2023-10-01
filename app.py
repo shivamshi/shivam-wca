@@ -7,20 +7,15 @@ import base64  # Import base64 for encoding the file
 import webbrowser  # Import webbrowser for opening the link
 
 st.sidebar.title("Whatsapp Chat Analyzer")
+st.sidebar.markdown("By Shivam Sharma")
 
 st.sidebar.markdown("Don't have the file to text currently?\nWell, no worries, I got you.\nDownload this random chat file to test the project⬇️")
 
-# Add a download button for RandomChat.txt (visible at all times)
-if st.sidebar.button("Download RandomChat.txt"):
-    # Create a text content for the file
+if st.sidebar.button("Random Chat"):
     text_content = "This is the content of RandomChat.txt."
-    
-    # Set up the download link
     href = f"data:text/plain;base64,{base64.b64encode(text_content.encode()).decode()}"
-    
-    # Add a download link to the page
     st.sidebar.markdown(
-        f'<a href="{href}" download="RandomChat.txt">Click here to download RandomChat.txt</a>',
+        f'<a href="{href}" download="RandomChat.txt">Click here to download</a>',
         unsafe_allow_html=True
     )
 
