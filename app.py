@@ -151,8 +151,9 @@ if uploaded_file is not None:
 
 
 st.sidebar.text("")
-st.sidebar.text("")
 st.sidebar.markdown("Check the code and working of this app at ([Github](https://github.com/shivamshi/shivam-wca))👈")
+st.sidebar.markdown("Check out my Linkedin profile and hire my if you are recruiter [Linkedin](https://www.linkedin.com/in/shivammmm)👈")
+st.sidebar.markdown("or mail me: shivam4skills@gmail.com")
 st.sidebar.text("")
 
 st.markdown("""
