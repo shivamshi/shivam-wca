@@ -144,5 +144,27 @@ if uploaded_file is not None:
             st.pyplot(fig)
 
 
-st.sidebar.markdown("Check the code and working of this app at ([Github](https://github.com/shivamshi))👈")
 
+st.sidebar.text("")
+st.sidebar.text("")
+st.sidebar.markdown("Check the code and working of this app at ([Github](https://github.com/shivamshi))👈")
+st.sidebar.text("")
+st.sidebar.text("")
+
+
+st.title("Contact Me👋")
+
+st.markdown("""
+<h2 style="text-align: center;">Get In Touch</h2>
+
+<form action="https://formspree.io/f/xwkzngor" method="POST" id="contact-form" target="_blank">
+    <a name="contact"></a>
+    <label>Name</label>
+    <input class="input-field" type="text" name="name" required>
+    <label>Email</label>
+    <input class="input-field" type="email" name="email" required>
+    <label>Message</label>
+    <textarea class="input-field" name="message"></textarea>
+    <button id="submit-btn" type="submit" value="index.html">Send</button>
+</form>
+""", unsafe_allow_html=True)
