@@ -1,7 +1,9 @@
 import streamlit as st
-import preprocessor,helper
+import preprocessor
+import helper
 import matplotlib.pyplot as plt
 import seaborn as sns
+import base64  # Import base64 for encoding the file
 
 st.sidebar.title("Whatsapp Chat Analyzer")
 
@@ -15,14 +17,13 @@ if uploaded_file is not None:
     user_list = df['user'].unique().tolist()
     user_list.remove('group_notification')
     user_list.sort()
-    user_list.insert(0,"Overall")
+    user_list.insert(0, "Overall")
 
-    selected_user = st.sidebar.selectbox("Show analysis wrt",user_list)
+    selected_user = st.sidebar.selectbox("Show analysis wrt", user_list)
 
     if st.sidebar.button("Show Analysis"):
-
         # Stats Area
-        num_messages, words, num_media_messages, num_links = helper.fetch_stats(selected_user,df)
+        num_messages, words, num_media_messages, num_links = helper.fetch_stats(selected_user, df)
         st.title("Top Statistics")
         col1, col2, col3, col4 = st.beta_columns(4)
 
@@ -41,13 +42,12 @@ if uploaded_file is not None:
 
         # monthly timeline
         st.title("Monthly Timeline")
-        timeline = helper.monthly_timeline(selected_user,df)
-        fig,ax = plt.subplots()
-        ax.plot(timeline['time'], timeline['message'],color='green')
+        timeline = helper.monthly_timeline(selected_user, df)
+        fig, ax = plt.subplots()
+        ax.plot(timeline['time'], timeline['message'], color='green')
         plt.xticks(rotation='vertical')
         st.pyplot(fig)
 
-        # daily timeline
         st.title("Daily Timeline")
         daily_timeline = helper.daily_timeline(selected_user, df)
         fig, ax = plt.subplots()
@@ -55,7 +55,6 @@ if uploaded_file is not None:
         plt.xticks(rotation='vertical')
         st.pyplot(fig)
 
-        # activity map
         st.title('Activity Map')
         col1,col2 = st.beta_columns(2)
 
@@ -127,13 +126,16 @@ if uploaded_file is not None:
             ax.pie(emoji_df[1].head(),labels=emoji_df[0].head(),autopct="%0.2f")
             st.pyplot(fig)
 
+        # Add a download button for RandomChat.txt
+        if st.sidebar.button("Download RandomChat.txt"):
+            # Create a text content for the file
+            text_content = "This is the content of RandomChat.txt."
 
+            # Set up the download link
+            href = f"data:text/plain;base64,{base64.b64encode(text_content.encode()).decode()}"
 
-
-
-
-
-
-
-
-
+            # Add a download link to the page
+            st.sidebar.markdown(
+                f'<a href="{href}" download="RandomChat.txt">Click here to download RandomChat.txt</a>',
+                unsafe_allow_html=True
+            )
