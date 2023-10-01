@@ -6,16 +6,15 @@ import seaborn as sns
 import base64  
 import webbrowser  
 
-st.title("Whatsapp Chat Analyzer")
-st.markdown("By Shivam Sharma ([Portfolio](https://shivamshi.github.io/portfolio))👈")
+st.sidebar.title("Whatsapp Chat Analyzer")
+st.sidebar.markdown("By Shivam Sharma ([Portfolio](https://shivamshi.github.io/portfolio))👈")
 
 # Add empty text elements to create a gap
 st.text("")
 st.text("")
 st.text("")
 
-st.sidebar.markdown("Don't have the file to text currently?")
-st.sidebar.markdown("Well, no worries, I got you.")
+st.sidebar.markdown("Don't have the file to text currently? Well, no worries, I got you.")
 st.sidebar.markdown("\nDownload this Random Chat file to test this app⬇️")
 
 if st.sidebar.button("Random Chat"):
@@ -168,10 +167,12 @@ st.markdown("""
         margin-bottom: 10px;
         border: 1px solid #ccc;
         border-radius: 5px;
+        background-color: #A5CCA4;
     }
     .input-field:focus {
         outline: none;
         border-color: #007BFF;
+        background-color: #A5CCA4;
     }
     .textarea-field {
         width: 100%;
@@ -201,7 +202,7 @@ st.markdown("""
 
 # HTML form with improved UI
 st.markdown("""
-<h2>Contact Me👋</h2>
+<h2 align="center">Contact Me👋</h2>
 <form class="contact-form" action="https://formspree.io/f/xwkzngor" method="POST" target="_blank">
     <label for="name">Name</label>
     <input class="input-field" type="text" id="name" name="name" required>
