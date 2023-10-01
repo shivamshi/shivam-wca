@@ -152,17 +152,52 @@ st.sidebar.text("")
 st.sidebar.text("")
 st.sidebar.markdown("""<a href="https://www.buymeacoffee.com/cvcvcvcvcv"> <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" height="50" width="210" alt="cvcvcvcvcv" /></a>""")
 
+# CSS styles for the form
 st.markdown("""
-<h2 style="text-align: center;">Contact Me👋</h2>
+<style>
+    .contact-form {
+        text-align: center;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    .input-field {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    .input-field:focus {
+        outline: none;
+        border-color: #007BFF;
+    }
+    .submit-btn {
+        background-color: #007BFF;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .submit-btn:hover {
+        background-color: #0056b3;
+    }
+</style>
+""", unsafe_allow_html=True)
 
-<form action="https://formspree.io/f/xwkzngor" method="POST" id="contact-form" target="_blank">
-    <a name="contact"></a>
-    <label>Name</label>
-    <input class="input-field" type="text" name="name" required>
-    <label>Email</label>
-    <input class="input-field" type="email" name="email" required>
-    <label>Message</label>
-    <textarea class="input-field" name="message"></textarea>
-    <button id="submit-btn" type="submit" value="index.html">Send</button>
+# HTML form with improved UI
+st.markdown("""
+<h2 style="text-align: center;">Contact me👋</h2>
+<form class="contact-form" action="https://formspree.io/f/xwkzngor" method="POST" target="_blank">
+    <label for="name">Name</label>
+    <input class="input-field" type="text" id="name" name="name" required>
+    <br>
+    <label for="email">Email</label>
+    <input class="input-field" type="email" id="email" name="email" required>
+    <br>
+    <label for="message">Message</label>
+    <textarea class="input-field" id="message" name="message" rows="4" required></textarea>
+    <br>
+    <button class="submit-btn" type="submit" value="index.html">Send</button>
 </form>
 """, unsafe_allow_html=True)
