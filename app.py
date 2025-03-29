@@ -8,7 +8,7 @@ import webbrowser
 
 st.sidebar.title("Whatsapp Chat Analyzer")
 st.sidebar.markdown("By Shivam Sharma ([Portfolio](https://shivamshi.github.io/portfolio))👈")
-
+st.balloons()
 # Add empty text elements to create a gap
 st.sidebar.text("")
 st.sidebar.text("")
